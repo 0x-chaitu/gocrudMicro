@@ -1,0 +1,14 @@
+sqlConfig: &sqlConfig
+    code: sqldb
+    driverName: pgx
+    urlAddress: "root:@tcp(localhost:4333)/service_config?charset=utf8"
+    dbName:
+useCaseConfig:
+    task:
+        code: task
+        taskDataConfig: &taskDataConfig
+            code: taskData
+            dataStoreConfig: *sqlConfig
+        txDataConfig: &txDataConfig
+            code: txData
+            dataStoreConfig: *sqlConfig
