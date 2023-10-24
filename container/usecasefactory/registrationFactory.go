@@ -11,7 +11,6 @@ type RegistrationFactory struct{}
 
 func (rf *RegistrationFactory) Build(c container.Container, appConfig *config.AppConfig, key string) (UseCaseInterface, error) {
 	uc := appConfig.UseCase.Task
-
 	udi, err := buildTaskData(c, &uc.TaskDataConfig)
 	if err != nil {
 		return nil, errors.Wrap(err, "")

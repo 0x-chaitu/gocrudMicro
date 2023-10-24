@@ -15,7 +15,7 @@ import (
 type sqlTaskDataServiceFactory struct{}
 
 func (sudsf *sqlTaskDataServiceFactory) Build(c container.Container, dataConfig *config.DataConfig) (dataservice.TaskDataInterface, error) {
-	log.Println("sqlUserDataServiceFactory")
+	log.Println("sqlTaskDataServiceFactory")
 	dsc := dataConfig.DataStoreConfig
 	dsi, err := datastorefactory.GetDataStoreFb(dsc.Code).Build(c, &dsc)
 	if err != nil {

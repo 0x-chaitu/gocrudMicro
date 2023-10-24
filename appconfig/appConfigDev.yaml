@@ -1,8 +1,7 @@
 sqlConfig: &sqlConfig
     code: sqldb
     driverName: pgx
-    urlAddress: "root:@tcp(localhost:4333)/service_config?charset=utf8"
-    dbName:
+    urlAdress: "postgres://chaitu:chaitu@localhost:5432/chaitu"
 useCaseConfig:
     task:
         code: task
@@ -12,3 +11,4 @@ useCaseConfig:
         txDataConfig: &txDataConfig
             code: txData
             dataStoreConfig: *sqlConfig
+            

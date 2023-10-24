@@ -7,6 +7,7 @@ import (
 	config "github.com/0x-chaitu/gocrudMicro/appconfig"
 	"github.com/0x-chaitu/gocrudMicro/container"
 	"github.com/0x-chaitu/gocrudMicro/tool/gdbc/databasehandler"
+	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/pkg/errors"
 )
 

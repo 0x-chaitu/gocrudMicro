@@ -36,7 +36,6 @@ type DataStoreConfig struct {
 	Code       string `yaml:"code"`
 	DriverName string `yaml:"driverName"`
 	UrlAdress  string `yaml:"urlAdress"`
-	DbName     string `yaml:"dbName"`
 }
 
 func ReadConfig(filename string) (*AppConfig, error) {
